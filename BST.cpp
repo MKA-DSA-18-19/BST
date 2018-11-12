@@ -42,11 +42,11 @@ void BST::visit() const{
 }
 
 /* Accessors */
-bool isLeaf() const{ return left == nullptr && right == nullptr; }
+bool BST::isLeaf(){ return left == nullptr && right == nullptr; }
 
-BST* getLeft() const{ return left; }
+BST* BST::getLeft(){ return left; }
   
-BST* getRight() const{ return right; }
+BST* BST::getRight(){ return right; }
 
 bool BST::find(int num) const{
   if (num == key) return true;
@@ -70,7 +70,7 @@ void BST::postOrder() const{
   if (right != nullptr) right->postOrder();
   visit();
 }
-void BST::breadthFirst() const{}
+void BST::breadthFirst() {}
 
 /* Mutators */
 bool BST::add(int num){

@@ -30,9 +30,9 @@ class BST{
   BST(const BST& other);
 
   /* Accessors */
-  bool isLeaf() const;    
-  BST* getLeft() const;
-  BST* getRight() const;
+  bool isLeaf();    
+  BST* getLeft();
+  BST* getRight();
   bool find(int num) const;
   void inOrder() const;
   void preOrder() const;
