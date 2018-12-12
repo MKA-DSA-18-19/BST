@@ -21,6 +21,7 @@ class BST{
 
   /* some private helper functions */
   void visit() const;
+  void breadthFirstHelper(std::queue<BST *>* q);
 
  public:
   int key;
@@ -30,14 +31,16 @@ class BST{
   BST(const BST& other);
 
   /* Accessors */
-  bool isLeaf();    
-  BST* getLeft();
-  BST* getRight();
+  bool isLeaf() const;    
+  BST* getLeft() const;
+  BST* getRight() const;
   bool find(int num) const;
   void inOrder() const;
   void preOrder() const;
   void postOrder() const;
   void breadthFirst();
+  BST* getLargest() const;
+  BST* getSmallest() const;
 
   /* Mutators */
   bool add(int num);
